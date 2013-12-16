@@ -1,0 +1,97 @@
+@import "bourbon"
+
+*
+  +box-sizing(border-box)
+  margin: 0
+  padding: 0
+
+body
+  font: 300 14px "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  background: #fff
+
+header
+  text-align: center
+  font-size: 24px
+  font-weight: 700
+  margin: 15px 0 25px
+  text-transform: uppercase
+
+#wrapper
+  width: 300px
+  height: 381px
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: -185px 0 0 -150px
+
+  .globe
+    margin: 0
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    overflow: hidden
+    width: 300px
+    height: 300px
+    background-size: cover
+    border-radius: 320px
+    +box-shadow(inset 0 5px rgba(255, 255, 255, 0.2))
+    border-top: 1px #000 solid
+    margin: 0 auto
+
+    .flake
+      position: absolute
+      width: 2px
+      height: 2px
+      top: 0
+      background: #fff
+      border-radius: 2px
+      top: -5px
+      +box-shadow(0 0 0 2px rgba(255, 255, 255, 0.2))
+      +animation(6s fall infinite linear)
+
+  .mask
+    z-index: 2
+    position: absolute
+    top: 0
+    left: 0
+    width: 300px
+    height: 381px 
+    background-image: url("/img/mask.png")
+    background-size: cover
+
+    .plinth
+      margin-top: 290px
+      text-align: center
+
+      p
+        font-size: 12px
+        font-style: italic
+        margin-bottom: 5px
+
+      a
+        padding: 5px 12px
+        border: 2px #000 solid
+        display: inline-block
+        border-radius: 4px
+        color: #000
+        text-decoration: none
+
+footer
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  text-align: center
+
++keyframes(fall)
+  0%
+    opacity: 0
+    top: -50px
+
+  25%
+    opacity: 1
+
+  100%
+    opacity: 0.6
+    top: 320px
