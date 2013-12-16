@@ -4,9 +4,10 @@
     %meta{charset: 'utf-8'}
     %title Snowglobe WIP
     %meta{name: 'viewport', content: 'width=device-width, user-scalable=no'}
-    %link{rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Lato:300,700'}
+    %link{rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Lato:300,700|Mountains+of+Christmas'}
     %link{rel: 'stylesheet', href: '/css/application.css'}
   %body
+    #fb-root
     %header The Snow-Lobe
     #wrapper
       .globe
@@ -14,6 +15,30 @@
         .plinth
           %a{href: '#'} Another?
     %footer
-      %iframe{src: "//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsnowlobe.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=516445358451836", scrolling: "no", frameborder: 0, style: "border:none; overflow:hidden; height:21px;", allowTransparency: "true"}
-    %script{src: '/js/shake.js'}
+      .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button_count'}
+      .credits
+        Created by 
+        %a{href: '//twitter.com/mattbutler07'} Matt
+        and 
+        %a{href: '//twitter.com/matthewgparsons'} Matt
+        and 
+        %a{href: '//twitter.com/mcmillatronic'} Josh
+    :javascript
+      var Config = {
+        lobes: [
+          "http://distilleryimage4.ak.instagram.com/de84723658a711e380a30e9a0402a7de_8.jpg",
+          "http://distilleryimage0.ak.instagram.com/5d7349a2591911e39a5a12a62c3665ab_8.jpg",
+          "http://distilleryimage3.ak.instagram.com/93d36cbc56ed11e392f11272c16e65b0_8.jpg",
+          "http://distilleryimage9.ak.instagram.com/57e8afa4585b11e3b8a312566eba8eff_8.jpg"
+        ]
+      };
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=516445358451836";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    %script{src: '/js/shake.js', defer: true}
     %script{src: '/js/application.js', defer: true}
