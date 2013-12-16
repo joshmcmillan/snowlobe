@@ -8,11 +8,17 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    dotenv (0.7.0)
     execjs (2.0.2)
+    foreman (0.63.0)
+      dotenv (>= 0.7)
+      thor (>= 0.13.6)
     haml (4.0.4)
       tilt
     hike (1.2.3)
     multi_json (1.8.2)
+    puma (2.6.0)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -44,7 +50,9 @@ PLATFORMS
 DEPENDENCIES
   bourbon (~> 3.1.8)
   coffee-script (~> 2.2.0)
+  foreman (~> 0.63.0)
   haml (~> 4.0.4)
+  puma (~> 2.6.0)
   sass (~> 3.2.12)
   sinatra (~> 1.4.4)
   sinatra-contrib (~> 1.4.1)

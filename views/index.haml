@@ -2,7 +2,7 @@
 %html
   %head
     %meta{charset: 'utf-8'}
-    %title Snowglobe WIP
+    %title The Snow-Lobe
     %meta{name: 'viewport', content: 'width=device-width, user-scalable=no'}
     %link{rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Lato:300,700|Mountains+of+Christmas'}
     %link{rel: 'stylesheet', href: '/css/application.css'}
@@ -15,7 +15,9 @@
         .plinth
           %a{href: '#'} Another?
     %footer
-      .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button_count'}
+      .social
+        .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button_count'}
+        %a.twitter-share-button{href: 'https://twitter.com/share'} Tweet
       .credits
         Created by 
         %a{href: '//twitter.com/mattbutler07'} Matt
@@ -40,5 +42,7 @@
         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=516445358451836";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
     %script{src: '/js/shake.js', defer: true}
     %script{src: '/js/application.js', defer: true}

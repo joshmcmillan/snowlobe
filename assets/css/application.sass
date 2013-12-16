@@ -41,7 +41,7 @@ header
   background: #fff
   border-radius: 10px
   +box-shadow(0 2px 2px rgba(0, 0, 0, 0.1))
-  
+
   @media all and (max-width: 320px)
     border-radius: 0
 
@@ -92,33 +92,47 @@ header
 
       a
         padding: 5px 12px
-        border: 2px #fff solid
+        border: 2px #000 solid
         display: inline-block
         border-radius: 4px
-        color: #fff
+        color: #000
         text-decoration: none
         transition-duration: 0.3s
         transition-timing-function: ease 
         transition-property: background, color
 
         &:hover
-          background: #fff
-          color: #000
+          background: #000
+          color: #fff
 
 footer
   position: absolute
   bottom: 0
   left: 0
   right: 0
-  padding: 10px 0
+  padding: 10px
   text-align: center
   background: #fff
   z-index: 10
   +box-shadow(0 -2px 2px rgba(0, 0, 0, 0.1))
+  +clearfix
+
+  .social
+    height: 20px
+    width: 320px
+    margin: 0 auto
+    float: left
+    +clearfix
+    .fb-share-button
+      float: left
+      margin-right: 10px
+    .twitter-share-button
+      float: left
 
   .credits
     font-size: 12px
     margin-top: 3px
+    float: right
 
 +keyframes(fall)
   0%
