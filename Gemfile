@@ -1,3 +1,5 @@
+source 'https://rubygems.org'
+
 gem 'sinatra',         '~> 1.4.4'
 gem 'sinatra-contrib', '~> 1.4.1', require: 'sinatra/reloader'
 gem 'haml',            '~> 4.0.4'
