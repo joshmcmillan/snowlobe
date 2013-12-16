@@ -11,13 +11,17 @@
     %header The Snow-Lobe
     #wrapper
       .globe
+        .image
       .mask
         .plinth
-          %a{href: '#'} Another?
+          %a{href: '#'} New ear?
     %footer
       .social
         .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button_count'}
         %a.twitter-share-button{href: 'https://twitter.com/share'} Tweet
+        %a.tumblr-share-button{href: "http://www.tumblr.com/share", title: "Share on Tumblr", style: "display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;"} Share on Tumblr
+        .reddit-share-button
+          %script{src: "http://www.reddit.com/static/button/button1.js"}
       .credits
         Created by 
         %a{href: '//twitter.com/mattbutler07'} Matt

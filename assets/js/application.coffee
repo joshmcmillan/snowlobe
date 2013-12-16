@@ -12,7 +12,14 @@ class Snowlobe
   showLobe: (event) =>
     event.preventDefault() if event and 'preventDefault' of event
 
-    document.querySelector('#wrapper .globe').style.backgroundImage = "url(#{@lobes[@currentLobe]})"
+    image = document.querySelector('#wrapper .globe .image')
+    image.className = 'image'
+
+    setTimeout(=>
+      image.className = 'image visible'
+      image.style.backgroundImage = "url(#{@lobes[@currentLobe]})"
+    , 300)
+
     ++@currentLobe
     @currentLobe = 0 if @currentLobe >= @lobes.length
 
