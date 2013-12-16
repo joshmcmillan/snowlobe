@@ -8,7 +8,9 @@
     %link{rel: 'stylesheet', href: '/css/application.css'}
   %body
     #fb-root
-    %header The Snow-Lobe
+    %header
+      %h1 The Snow-Lobe
+      %p #lobes live from Instagram. Fresh as falling snow.
     #wrapper
       .globe
         .image
@@ -17,8 +19,8 @@
           %a{href: '#'} New ear?
     %footer
       .social
-        .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button_count'}
-        %a.twitter-share-button{href: 'https://twitter.com/share'} Tweet
+        .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button'}
+        %a.twitter-share-button{href: 'https://twitter.com/share', 'data-hashtags' => 'snowlobe', 'data-related' => 'mcmillatronic,matthewgparsons,mattbutler07', 'data-count' => 'none', 'data-text' => 'The Snow-Lobe'} Tweet
         %a.tumblr-share-button{href: "http://www.tumblr.com/share", title: "Share on Tumblr", style: "display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;"} Share on Tumblr
         .reddit-share-button
           %script{src: "http://www.reddit.com/static/button/button1.js"}
