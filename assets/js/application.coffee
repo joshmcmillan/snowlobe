@@ -3,6 +3,7 @@ class Snowlobe
   currentLobe: 0
 
   constructor: ->
+    @shuffleLobes()
     @showShakeCopy()
     @showLobe()
     window.addEventListener('shake', @showLobe, false)
@@ -41,5 +42,13 @@ class Snowlobe
     document.querySelector('#wrapper .mask .plinth a').style.display = 'none'
     document.querySelector('#wrapper .mask .plinth span').style.display = 'block'
 
+  shuffleLobes: ->
+    counter = @lobes.length
+
+    while(counter--)
+      index          = (Math.random() * counter) | 0
+      temp           = @lobes[counter]
+      @lobes[counter] = @lobes[index]
+      @lobes[index]   = temp
 
 new Snowlobe
