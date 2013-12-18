@@ -139,16 +139,15 @@ footer
   .social
     height: 22px
     float: left
-    // overflow: hidden
-    position: relative
+    overflow: hidden
     +clearfix
 
     .share
       height: 22px
       overflow: hidden
       margin-right: 10px
-      display: inline-block
-      position: relative
+      display: block
+      float: left
 
       &.twitter
         width: 58px
@@ -189,7 +188,10 @@ footer
     .social,
     .credits
       float: none
-      text-align: center
+      text-align: left
+
+    .social .share.reddit
+      display: none
 
 +keyframes(fall)
   0%
