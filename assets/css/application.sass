@@ -139,20 +139,20 @@ footer
   .social
     height: 20px
     float: left
+    overflow: hidden
     +clearfix
 
-    .fb-share-button,
-    .twitter-share-button,
-    .tumblr-share-button,
-    .reddit-share-button
-      float: left
+    .share
+      height: 21px
+      overflow: hidden
       margin-right: 10px
+      display: inline-block
 
-    .twitter-share-button
-      width: 58px !important
+      &.twitter
+        width: 58px
 
-    .reddit-share-button
-      margin-top: 1px
+      &.reddit
+        margin-top: 1px
 
   .credits
     font-size: 12px
@@ -181,6 +181,13 @@ footer
   footer
     position: relative
     margin-top: 10px
+
+@media all and (max-width: 640px)
+  footer
+    .social,
+    .credits
+      float: none
+      text-align: center
 
 +keyframes(fall)
   0%

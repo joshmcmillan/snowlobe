@@ -30,10 +30,13 @@
           %span Shake for a new ear!
     %footer
       .social
-        .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button'}
-        %a.twitter-share-button{href: 'https://twitter.com/share', 'data-hashtags' => 'snowlobe', 'data-related' => 'mcmillatronic,matthewgparsons,mattbutler07', 'data-count' => 'none', 'data-text' => 'The Snow-Lobe'} Tweet
-        %a.tumblr-share-button{href: "http://www.tumblr.com/share", title: "Share on Tumblr", style: "display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;"} Share on Tumblr
-        .reddit-share-button
+        .share.fb
+          .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button'}
+        .share.twitter
+          %a.twitter-share-button{href: 'https://twitter.com/share', 'data-hashtags' => 'snowlobe', 'data-related' => 'mcmillatronic,matthewgparsons,mattbutler07', 'data-count' => 'none', 'data-text' => 'The Snow-Lobe'} Tweet
+        .share.tumblr
+          %a.tumblr-share-button{href: "http://www.tumblr.com/share", title: "Share on Tumblr", style: "display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;"} Share on Tumblr
+        .share.reddit
           %script{src: "http://www.reddit.com/static/button/button1.js"}
       .credits
         Created by 
