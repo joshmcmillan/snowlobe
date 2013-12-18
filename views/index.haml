@@ -27,6 +27,7 @@
       .mask
         .plinth
           %a{href: '#'} New ear?
+          %span Shake for a new ear!
     %footer
       .social
         .fb-share-button{'data-href' => 'http://snowlobe.com', 'data-width' => 85, 'data-type' => 'button'}
@@ -43,12 +44,7 @@
         %a{href: '//twitter.com/mcmillatronic'} Josh
     :javascript
       var Config = {
-        lobes: [
-          "http://distilleryimage4.ak.instagram.com/de84723658a711e380a30e9a0402a7de_8.jpg",
-          "http://distilleryimage0.ak.instagram.com/5d7349a2591911e39a5a12a62c3665ab_8.jpg",
-          "http://distilleryimage3.ak.instagram.com/93d36cbc56ed11e392f11272c16e65b0_8.jpg",
-          "http://distilleryimage9.ak.instagram.com/57e8afa4585b11e3b8a312566eba8eff_8.jpg"
-        ]
+        lobes: #{@lobes.to_json}
       };
     :javascript
       (function(d, s, id) {

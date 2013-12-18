@@ -3,6 +3,7 @@ class Snowlobe
   currentLobe: 0
 
   constructor: ->
+    @showShakeCopy()
     @showLobe()
     window.addEventListener('shake', @showLobe, false)
     document.querySelector('#wrapper .plinth a').addEventListener('click', @showLobe, false)
@@ -33,5 +34,12 @@ class Snowlobe
     flake.style.webkitAnimationDelay = "-#{delay}s"
 
     document.querySelector('#wrapper .globe').appendChild(flake)
+
+  showShakeCopy: ->
+    return unless 'ondevicemotion' of window and /android|iphone|ipad|ipod/ig.test(navigator.userAgent)
+
+    document.querySelector('#wrapper .mask .plinth a').style.display = 'none'
+    document.querySelector('#wrapper .mask .plinth span').style.display = 'block'
+
 
 new Snowlobe
